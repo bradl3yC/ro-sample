@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
-import './index.css';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import click from './actions';
+import logo from '../../logo.svg';
+import './index.css';
 
 class App extends Component {
   static propTypes = {
@@ -27,16 +27,12 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    clicked: state.app.clicked,
-  }
-};
+const mapStateToProps = (state) => ({
+  clicked: state.app.clicked,
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    click: () => dispatch(click())
-  }
-}
+const mapDispatchToProps = (dispatch) => ({
+  click: () => dispatch(click()),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
