@@ -1,7 +1,5 @@
-const click = () => {
-  return {
-    type: 'TOGGLE_CLICKED'
-  }
-};
+const click = () => ({
+  type: 'CLICKED',
+});
 
-export default click
+export default click;

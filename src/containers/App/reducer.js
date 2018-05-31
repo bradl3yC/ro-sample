@@ -1,13 +1,15 @@
 const initialState = {
-  clicked: false
+  clicked: false,
 };
 
 const app = (state = initialState, action) => {
   switch (action.type) {
-    case 'TOGGLE_CLICKED':
-      return {clicked: !state.clicked};
+    case 'CLICKED':
+      return { clicked: true };
+    case 'UNCLICKED':
+      return { clicked: false };
     default: {
-      return state
+      return state;
     }
   }
 };

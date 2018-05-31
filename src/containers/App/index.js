@@ -8,6 +8,7 @@ import './index.css';
 class App extends Component {
   static propTypes = {
     clicked: PropTypes.bool.isRequired,
+    click: PropTypes.func.isRequired,
   };
   render() {
     const clicked = this.props.clicked.toString();
